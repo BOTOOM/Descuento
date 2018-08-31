@@ -2,4 +2,4 @@
 
 accede por el siguiente link
 
-https://botoom.github.io/Descuento
+https://botoom.github.io/Descuento/
