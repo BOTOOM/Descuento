@@ -12,7 +12,7 @@
   display: inline-block;
   background-color:#ffffff;
   width: 200px;
-  height: 180px;
+  height: 400px;
   text-align: center !important;
   margin: auto;
   padding: 10px;
@@ -27,11 +27,11 @@ input{
   border:none;
 }
 
-#opcion1{
+#calculo{
   background-color: #4fe951;
 }
 
-#opcion2{
+#volver_1{
   background-color: #4fe951;
 }
 
