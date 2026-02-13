@@ -1,24 +1,82 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Descuentos V0.2.0</title>
-		<link rel="stylesheet" href="../css/op2.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script type="text/javascript" src="../script/calculo2.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opción 2 - Precio Final Directo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/op2.css">
+    <script type="text/javascript" src="../script/calculo2.js" defer></script>
 </head>
 
 <body>
-    <div id="contenedor">
-      Precio de la promocion: <input type="text" id="PrecioP" value=""><br>
-      Descuento realizado por el sistema: <input type="text" id="DescSis" value=""><br>
-      <input type="button" id="calculo" value="Calcular" onclick="calcular()"><br>
-      Ingrese el siguiente valor: <label id="ValorFinal"></label><br>
-      <input type="button" id="volver_1" value="Volver" onclick="volver()"><br>
+    <div class="container">
+        <header class="header">
+            <button class="back-btn" onclick="volver()">← Volver</button>
+            <h1>🎯 Opción 2</h1>
+            <p class="subtitle">Precio Final Directo</p>
+        </header>
+
+        <main class="main-content">
+            <div class="explanation">
+                <div class="problem-description">
+                    <h3>🤔 ¿Cuándo usar esta opción?</h3>
+                    <p>Usa esta calculadora cuando solo conoces el precio final que necesitas obtener 
+                       y sabes qué porcentaje de descuento aplica el sistema.</p>
+                </div>
+
+                <div class="example-scenario">
+                    <h4>💡 Ejemplo Práctico</h4>
+                    <div class="scenario">
+                        <div class="scenario-item">
+                            <strong>Problema:</strong> Necesitas que el producto cueste $8.000 final 
+                            y el sistema aplica 15% de descuento.
+                        </div>
+                        <div class="scenario-item">
+                            <strong>Solución:</strong> Debes ingresar $9.412 en el sistema para que 
+                            al aplicar 15% de descuento, el resultado sea $8.000.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="formula-box">
+                    <h4>📐 Fórmula Matemática</h4>
+                    <div class="formula">
+                        Precio Base = Precio Final ÷ (1 - Descuento Sistema)
+                    </div>
+                </div>
+            </div>
+
+            <div class="calculator">
+                <h3>🧮 Calculadora</h3>
+                <form id="calculator-form" onsubmit="return false;">
+                    <div class="input-group">
+                        <label for="PrecioP">💰 Precio Final Deseado ($)</label>
+                        <input type="number" id="PrecioP" placeholder="Ej: 8000" required step="0.01">
+                        <small>Precio que quieres que pague el cliente</small>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="DescSis">💻 Descuento del Sistema (%)</label>
+                        <input type="number" id="DescSis" placeholder="Ej: 15" required min="0" max="100" step="0.01">
+                        <small>Porcentaje de descuento que aplica el sistema</small>
+                    </div>
+
+                    <button type="button" id="calculo" class="btn-calculate" onclick="calcular()">
+                        🚀 Calcular Precio Base
+                    </button>
+                </form>
+
+                <div class="result-box" id="result-box" style="display: none;">
+                    <h4>✅ Resultado</h4>
+                    <div class="result-value">
+                        <span>Debes ingresar en el sistema:</span>
+                        <strong id="ValorFinal">$0</strong>
+                    </div>
+                    <div class="result-explanation" id="result-explanation"></div>
+                </div>
+            </div>
+        </main>
     </div>
-
 </body>
-
-<html>
+</html>

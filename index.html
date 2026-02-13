@@ -1,24 +1,65 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="es">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<title>Descuentos V0.2.0</title>
-		<link rel="stylesheet" href="css/style.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <script type="text/javascript" src="script/direct.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Descuentos - Almacenes Éxito</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="script/direct.js" defer></script>
 </head>
 
 <body>
-    <div id="contenedor">
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <h1>💰 Calculadora de Descuentos</h1>
+                <p class="subtitle">Herramienta para Almacenes Éxito</p>
+            </div>
+        </header>
 
-      <input type="button" id="opcion1" value="Opcion 1" onclick="op1()"><br>
-      <input type="button" id="opcion2" value="Opcion 2" onclick="op2()"><br>
-      Elaborado por: <br>
-      Edwar Diaz Ruiz
+        <main class="main-content">
+            <div class="description">
+                <p>¿Alguna vez tuviste problemas calculando descuentos en el sistema? 
+                   Esta herramienta te ayuda a encontrar el precio exacto que debes ingresar 
+                   para obtener el descuento correcto.</p>
+            </div>
+
+            <div class="options-grid">
+                <div class="option-card" onclick="op1()">
+                    <div class="option-icon">📊</div>
+                    <h3>Opción 1</h3>
+                    <h4>Descuento Promocional vs Sistema</h4>
+                    <p>Usa esta opción cuando tienes un producto con descuento promocional, 
+                       pero el sistema aplica un porcentaje diferente.</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong><br>
+                        Quieres $8.000 con 20% de descuento,<br>
+                        pero el sistema solo aplica 15%
+                    </div>
+                    <button class="btn-primary">Calcular ahora</button>
+                </div>
+
+                <div class="option-card" onclick="op2()">
+                    <div class="option-icon">🎯</div>
+                    <h3>Opción 2</h3>
+                    <h4>Precio Final Directo</h4>
+                    <p>Usa esta opción cuando solo conoces el precio final que necesitas 
+                       y el descuento que aplica el sistema.</p>
+                    <div class="example">
+                        <strong>Ejemplo:</strong><br>
+                        Necesitas que el producto cueste $8.000<br>
+                        y el sistema aplica 15% de descuento
+                    </div>
+                    <button class="btn-primary">Calcular ahora</button>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <p>Creado por: Edwar Díaz Ruiz</p>
+            <p class="version">Versión 2.0 - Modernizada</p>
+        </footer>
     </div>
-
 </body>
-
-<html>
+</html>
